@@ -1,32 +1,37 @@
 package com.barrybecker4.ca.dj.jigo.sgf;
 
-import junit.framework.TestCase;
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * @author Barry Becker
  */
-public class PointTest extends TestCase {
+public class PointTest  {
 
     /** instance under test. */
     private Point point;
 
 
-    @Override
+    @Before
     public void setUp() {
         point = new Point(2, 3);
     }
 
-
+    @Test
     public void testDefaultConstruction() {
         point = new Point();
         verify(0, 0);
     }
 
+    @Test
     public void testNormalConstruction() {
         point = new Point(2, 3);
         verify(2, 3);
     }
 
+    @Test
     public void testCopyConstruction() {
         point = new Point(new Point(4, 3));
         verify(4, 3);

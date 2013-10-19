@@ -8,10 +8,6 @@ apply from: 'https://raw.github.com/barrybecker4/bb4-common/master/bb4.gradle'
 
 project.archivesBaseName = 'bb4-sgf'
 
-dependencies {
-    testCompile 'junit:junit:3.+'
-}
-
 jar {
     archiveName = "${archivesBaseName}-${version}.jar"
     manifest {
