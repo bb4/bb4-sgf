@@ -2,7 +2,7 @@
 
 This library project is derived from Jigo by Dave Jarvis and published under the
 [GNU Public License v2](http://www.gnu.org/licenses/gpl-2.0.html) or later.
-The Jigo website is http://www.yutopian.com/go/Jigo/. Some modifications were made to the Jigo source so it could be
+The Jigo website is http://whitemagicsoftware.com/software/java/jigo/. Some modifications were made to the Jigo source so it could be
 used with a Go applet (and other games) in bb4-game. Only the SGF code used for persistence of game files
 has been extracted from the Jigo project. I make no guaranties about the operation of this software. The source
 has been placed in com/barrybecker4/ so that the jar can be uploaded to com.barrybecker4 on Sonatype.
