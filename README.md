@@ -8,7 +8,7 @@ has been extracted from the Jigo project. I make no guaranties about the operati
 has been placed in com/barrybecker4/ so that the jar can be uploaded to com.barrybecker4 on Sonatype.
 
 ### How to Build
-Type 'gradle build' at the root. This will build everything, but since its a library project there won't be much to see.
+Type './gradlew build' at the root. This will build everything, but since its a library project there won't be much to see.
 If you want to open the source in Intellij, then first run 'gradle idea'.
 
 When there is a new release, versioned artifacts will be published by Barry Becker to [Sonatype](https://oss.sonatype.org).
