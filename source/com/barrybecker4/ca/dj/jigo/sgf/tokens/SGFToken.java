@@ -53,7 +53,7 @@ public abstract class SGFToken
     // "less special".  This is due to the definition of "simpletext" being
     // not so simple.
     //
-    st.wordChars( (int)'(', (int)')' );
+    st.wordChars( '(', ')' );
     st.eolIsSignificant( true );
 
     try
@@ -62,7 +62,7 @@ public abstract class SGFToken
     }
     catch( IOException ioe ) { }
 
-    st.ordinaryChars( (int)'(', (int)')' );
+    st.ordinaryChars( '(', ')' );
     st.eolIsSignificant( false );
 
     return result;
@@ -75,7 +75,7 @@ public abstract class SGFToken
    * read and validate (int)']' in the parse method, above.
    *
    * @param st - The SGF stream from which characters can be read.
-   * @throw SGFException - Something quite nasty happened.
+   * @throws SGFException - Something quite nasty happened.
    */
   protected abstract boolean parseContent( StreamTokenizer st )
     throws IOException, SGFException;

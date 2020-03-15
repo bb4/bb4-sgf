@@ -2,24 +2,13 @@
 
 description = 'Subset of jigo SGF code derived from http://www.yutopian.com/go/Jigo/.'
 group = 'com.barrybecker4'
-version = '1.1'
-
-apply from: 'https://raw.githubusercontent.com/bb4/bb4-common/master/bb4.gradle'
-
-project.archivesBaseName = 'bb4-sgf'
-mainClassName = "com.barrybecker4.ca.dj.jigo.sgf.Point"
-
-jar {
-    archiveName = "${archivesBaseName}-${version}.jar"
-    manifest {
-        attributes 'Implementation-Title': 'Subset of jigo SGF code.',
-            'Implementation-Version': version,
-            provider: 'gradle'
-    }
+version = '1.1.2'
+ext {
+    archivesBaseName = 'bb4-sgf'
+    mainClass = "com.barrybecker4.ca.dj.jigo.sgf.Point"
 }
-
-
-apply from: 'https://raw.github.com/barrybecker4/bb4-common/master/bb4-publish.gradle'
+apply from: 'https://raw.githubusercontent.com/bb4/bb4-common/master/bb4.gradle'
+apply from: 'https://raw.githubusercontent.com/bb4/bb4-common/master/bb4-publish.gradle'
 
 signArchives {
     enabled = false

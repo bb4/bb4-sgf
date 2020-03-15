@@ -53,5 +53,18 @@ public final class Point
       this(pt.x, pt.y);
   }
 
+  public String toString()
+  {
+    return "Point " + x + ", " + y;
+  }
+
+  // just so we have something to run
+  public static void main(String[] args) {
+    Point pt = new Point(4, 5);
+    System.out.println("point = " + pt.toString());
+  }
 }
+
+
+
 
