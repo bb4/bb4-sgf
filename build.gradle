@@ -1,4 +1,14 @@
-/* Copyright by Barry G. Becker, 2013. Licensed under MIT License: http://www.opensource.org/licenses/MIT */
+// Copyright by Barry G. Becker, 2013. Licensed under MIT License: http://www.opensource.org/licenses/MIT
+
+buildscript {
+    repositories {
+        // retrieve the shared gradle build scripts from here
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/"}
+    }
+    dependencies {
+        classpath 'com.barrybecker4:bb4-gradle:1.6-SNAPSHOT'
+    }
+}
 
 description = 'Subset of jigo SGF code derived from http://www.yutopian.com/go/Jigo/.'
 group = 'com.barrybecker4'
@@ -7,8 +17,8 @@ ext {
     archivesBaseName = 'bb4-sgf'
     mainClass = "com.barrybecker4.ca.dj.jigo.sgf.Point"
 }
-apply from: 'https://raw.githubusercontent.com/bb4/bb4-common/master/bb4.gradle'
-apply from: 'https://raw.githubusercontent.com/bb4/bb4-common/master/bb4-publish.gradle'
+apply from: project.buildscript.classLoader.getResource('bb4.gradle').toURI()
+apply from: project.buildscript.classLoader.getResource('bb4-publish.gradle').toURI()
 
 signArchives {
     enabled = false
